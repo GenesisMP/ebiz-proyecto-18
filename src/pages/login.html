@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inicio de sesion</title>
+    <link rel="stylesheet" href="../styles/styles.css" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="../../public/icons/page-icon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="../../public/icons/page-icon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="../../public/icons/page-icon/favicon-16x16.png"
+    />
+    <link rel="icon" href="../../public/icons/page-icon/favicon.ico"
+   />
+  </head>
+  <body>
+    <div class="container">
+      <div class="forms-container">
+        <div class="forms" id="login-form">
+          <form action="" id="Login-Form">
+            <h2>Inicia Sesión</h2>
+            <p>
+              Ya te registraste?
+              <a href="" id="switch-to-register">Registro</a>
+            </p>
+            <div class="input-container">
+              <label for="email">Email</label>
+              <input
+                id="login-email"
+                type="email"
+                name="email"
+                placeholder="you@example.com"
+              />
+            </div>
+            <div class="input-container">
+              <div class="forget">
+                <label for="password">Contraseña</label>
+                <a href="#">Olvidé mi Contraseña</a>
+              </div>
+              <input
+                id="login-password"
+                type="password"
+                name="password"
+                placeholder="Tu Contraseña"
+              />
+              <p id="login-error" class="error-message"></p>
+            </div>
+            <div class="remember-me">
+              <input type="checkbox" id="checkbox" />
+              <label for="checkbox">Recuerdame</label>
+            </div>
+            <button type="submit">Ingresar</button>
+            <div class="line-width-text">
+              <span>O inicia sesión con</span>
+            </div>
+            <div class="other-login" id="other-login">
+              <button id="login-google" type="button"> 
+                <img src="../../public/icons/google.svg" alt="" /> Google
+              </button>
+              <button id="login-facebook" type="button">
+                <img src="../../public/icons/facebook.svg" alt="" /> Facebook
+              </button>
+            </div>
+          </form>
+        </div>
+        <div class="forms" id="register-form">
+          <form id="register-form">
+            <h2>Registrate</h2>
+            <p>
+              Ya te registraste?
+              <a href="" id="switch-to-login">Inicia sesión</a>
+            </p>
+            <div class="input-container">
+              <label for="name">Nombre</label>
+              <input
+                id="register-name"
+                type="text"
+                placeholder="Ingresa tu Nombre"
+              />
+            </div>
+            <div class="input-container">
+              <label for="email-register">Email</label>
+              <input
+                id="register-email"
+                type="email"
+                placeholder="you@example.com"
+              />
+            </div>
+            <div class="input-container">
+              <label for="password-register">Contraseña</label>
+              <input
+                id="register-password"
+                type="password"
+                placeholder="Tu Contraseña"
+              />
+              <p id="register-succesful" class="succesful-message"></p>
+              <p id="register-error" class="error-message"></p>
+            </div>
+            <button class="btn-register" type="submit">Registrarse</button>
+            <div>
+              <div class="line-width-text">
+                <span>O Registrate con</span>
+              </div>
+              <div class="other-login" id="other-login">
+                <button id="register-google" type="button">
+                  <img src="../../public/icons/google.svg" alt="" /> Google
+                </button>
+                <button id="register-facebook" type="button">
+                  <img src="../../public/icons/facebook.svg" alt="" /> Facebook
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="banner">
+        <div class="shape shape1"></div>
+        <div class="shape shape2"></div>
+        <div class="shape shape3"></div>
+
+        <section>
+          <h1>Bienvenido al <span> Portal de Ebiz</span></h1>
+          <p>Inicia sesion para acceder a su cuenta</p>
+          <img src="../../../Proyecto-Ayuda/banner (1).svg" alt="img" />
+        </section>
+      </div>
+      <div class="sidebar">
+        <div class="sign" id="btn-sign-in">
+          <img src="../../public/icons/crown.svg" alt="" />
+          <span>Ingresar</span>
+        </div>
+        <div class="sign" id="btn-sign-up">
+          <img src="../../public/icons/rule (1).svg" alt="" />
+          <span>Registrarse</span>
+        </div>
+      </div>
+    </div>
+    <script src="../../src/scripts/script.js"></script>
+    <script type="module" src="../../src/scripts/register.js"></script>
+    <script type="module" src="../../src/scripts/login.js"></script>
+    <!--<script>
+      document.addEventListener("DOMContentLoaded", () => {
+        document
+          .getElementById("login-google")
+          .addEventListener("click", () => login(googleProvider));
+        document
+          .getElementById("login-facebook")
+          .addEventListener("click", () => login(facebookProvider));
+      });
+    </script>-->
+  </body>
+</html>

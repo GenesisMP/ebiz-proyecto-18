@@ -1,0 +1,22 @@
+@import url("https://fonts.googleapis.com/css2?family=Marcellus&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", serif;
+}
+/*colors*/
+:root {
+  --color-primary: #5951ed;
+  --color-secondary: #504af7;
+  --color-background: #99a2fb;
+  --color-background-form: #ffffff;
+  --color-text-primary: #000000;
+  --color-text-secondary: #656565;
+  --color-border: #cdcdcd;
+  --color-button-text: #ffffff;
+  --color-icon-google: #db4437;
+  --color-icon-facebook: #4267b2;
+  --color-title: #f7f3fa;
+}

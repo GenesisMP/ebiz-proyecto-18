@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/src/styles/global.css" />
+    <link rel="stylesheet" href="/src/styles/dashboard.css" />
+    <link rel="stylesheet" href="/src/styles/bootstrap.css" />
+    <script type="module" src="/src/scripts/firebase-config.js"></script>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/public/icons/page-icon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/public/icons/page-icon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/public/icons/page-icon/favicon-16x16.png"
+    />
+    <link rel="icon" href="/public/icons/page-icon/favicon.ico" />
+  </head>
+  <body>
+    <!--Sidebar Responsive-->
+    <div class="d-flex" id="wrapper">
+      <!-- Sidebar -->
+      <div class="collapse d-md-block text-white" id="sidebar">
+        <div class="d-flex flex-column p-4">
+          <div class="d-flex flex-row mb-4 gap-3 align-items-center">
+            <img src="/public/img/eBiz-logo.png" alt="" id="logo-image" />
+            <h2>e <strong>BIZ</strong></h2>
+          </div>
+          <div
+            class="d-flex d-block bg-white p-2 rounded flex-row mb-4 align-items-center"
+          >
+            <img
+              src="/public/icons/aside-icons/search.svg"
+              alt=""
+              class="aside-icons"
+            />
+            <input
+              class="form-control me-1"
+              type="search"
+              placeholder="Search"
+              aria-label="Search"
+            />
+          </div>
+          <h4 class="fs-3">Menú</h4>
+          <ul class="nav flex-column">
+            <li class="nav-item d-block p-2">
+              <a
+                class="nav-link text-white"
+                href="/src/pages/facturas-disponibles.html"
+                ><img
+                  src="/public/icons/nav-icons/triangle.svg"
+                  alt=""
+                  class="aside-icons"
+                />Facturas Disponibles</a
+              >
+            </li>
+            <li class="nav-item d-block p-2">
+              <a
+                class="nav-link text-white"
+                href="/src/pages/facturas-pendientes.html"
+                ><img
+                  src="/public/icons/nav-icons/triangle.svg"
+                  alt=""
+                  class="aside-icons"
+                />Facturas Pendientes</a
+              >
+            </li>
+            <li class="nav-item d-block p-2">
+              <a
+                class="nav-link text-white"
+                href="/src/pages/negociaciones.html"
+                ><img
+                  src="/public/icons/nav-icons/triangle.svg"
+                  alt=""
+                  class="aside-icons"
+                />Negociaciones</a
+              >
+            </li>
+            <li class="nav-item d-block p-2">
+              <a class="nav-link text-white" href="/src/pages/historial.html"
+                ><img
+                  src="/public/icons/nav-icons/triangle.svg"
+                  alt=""
+                  class="aside-icons"
+                />Historial</a
+              >
+            </li>
+            <li class="nav-item d-block p-2">
+              <a
+                class="nav-link text-white"
+                href="/src/pages/carrito-compras.html"
+                ><img
+                  src="/public/icons/aside-icons/cart.svg"
+                  alt=""
+                  class="aside-icons"
+                />Carrito de Compras</a
+              >
+            </li>
+          </ul>
+          <br />
+          <h4 class="fs-3">Contactanos</h4>
+          <ul class="nav flex-column">
+            <li class="nav-item d-block p-2">
+              <a
+                class="nav-link text-white"
+                href="https://www.facebook.com/ebizlatinamerica"
+                ><img
+                  src="/public/icons/aside-icons/facebook.svg"
+                  alt=""
+                  class="aside-icons"
+                />Facebook</a
+              >
+            </li>
+            <li class="nav-item d-block p-2">
+              <a class="nav-link text-white" href="#"
+                ><img
+                  src="/public/icons/aside-icons/whatsapp.svg"
+                  alt=""
+                  class="aside-icons"
+                />WhatsApp</a
+              >
+            </li>
+            <li class="nav-item d-block p-2">
+              <a
+                class="nav-link text-white"
+                href="https://www.instagram.com/ebizlatinamerica/"
+                ><img
+                  src="/public/icons/aside-icons/instagram.svg"
+                  alt=""
+                  class="aside-icons"
+                />Instagram</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Contenido principal -->
+      <div class="flex-grow-1" id="main-container">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg">
+          <div class="container-fluid p-2" id="navbar">
+            <button
+              class="btn btn-primary d-md-none"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#sidebar"
+              aria-expanded="false"
+              aria-controls="sidebar"
+            >
+              ☰ Menú
+            </button>
+            <!-- Barra de búsqueda -->
+            <form class="d-flex mx-auto" role="search">
+              <input
+                class="form-control me-2"
+                type="search"
+                placeholder="Search"
+                aria-label="Search"
+              />
+            </form>
+            <!-- Iconos y dropdown -->
+            <div class="d-flex align-items-center">
+              <!-- Iconos de notificaciones, correos e historial -->
+              <div class="d-flex gap-3">
+                <div class="btn-group">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="bi bi-bell"
+                      ><img
+                        src="/public/icons/nav-icons/bell.svg"
+                        alt=""
+                        class="nav-icon"
+                    /></i>
+                    <!-- Inserte el icono de lo que quieras -->
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="#">Notificación 1</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="#">Notificación 2</a>
+                    </li>
+                  </ul>
+                </div>
+                <div class="btn-group">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="bi bi-envelope">
+                      <img
+                        src="/public/icons/nav-icons/mail.svg"
+                        alt=""
+                        class="nav-icon"
+                    /></i>
+                    <!-- Inserte el icono de lo que quieras -->
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Correo 1</a></li>
+                    <li><a class="dropdown-item" href="#">Correo 2</a></li>
+                  </ul>
+                </div>
+                <div class="btn-group">
+                  <button
+                    type="button"
+                    class="btn btn-secondary"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    <i class="bi bi-clock">
+                      <img
+                        src="/public/icons/nav-icons/bell.svg"
+                        alt=""
+                        class="nav-icon"
+                    /></i>
+                    <!-- Inserte el icono de lo que quieras -->
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Historial 1</a></li>
+                    <li><a class="dropdown-item" href="#">Historial 2</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <!-- Imagen de usuario y nombre -->
+              <div class="ms-3 bg-white p-1 rounded">
+                <img
+                  src="/public/img/eBiz-logo.png"
+                  alt="User"
+                  class="rounded-circle"
+                  id="logo-image"
+                />
+                <span class="ms-2">Inserte Usuario</span>
+              </div>
+            </div>
+          </div>
+        </nav>
+
+        <!-- Contenido -->
+        <div class="container-fluid mt-3 p-3">
+          <h1 class="text-center fw-bold">Bienvenido</h1>
+          <div class="container-fluid" id="content">
+            <div class="d-flex flex-row gap-2 p-3">
+              <div class="container p-3" id="first-degradade">
+                <img
+                  src="/public/icons/cards-icons/statics.svg"
+                  alt=""
+                  class="card-icons"
+                />
+                <h2>Ganancias</h2>
+                <p id="cantidad"></p>
+              </div>
+              <div class="container p-3" id="second-degradade">
+                <img
+                  src="/public/icons/cards-icons/statics.svg"
+                  alt=""
+                  class="card-icons"
+                />
+                <h2>Ganancias</h2>
+                <p id="cantidad"></p>
+              </div>
+              <div class="container p-3" id="third-degradade">
+                <img
+                  src="/public/icons/cards-icons/statics.svg"
+                  alt=""
+                  class="card-icons"
+                />
+                <h2>Ganancias</h2>
+                <p id="cantidad"></p>
+              </div>
+              <div class="container p-3" id="fourth-degradade">
+                <img
+                  src="/public/icons/cards-icons/statics.svg"
+                  alt=""
+                  class="card-icons"
+                />
+                <h2>Ganancias</h2>
+                <p id="cantidad"></p>
+              </div>
+            </div>
+            <div class="container-fluid">INSERTE GRAFICO DE LINEAS</div>
+            <div class="container-fluid d-flex fle-row">
+              <div class="container">Inserte tareas Pendientes</div>
+              <div class="container">Inserte consejos utiles</div>
+              <div class="container">Inserte calendario</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/src/scripts/auth-guard.js"></script>
+    <script type="module" src="/src/scripts/factura.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+  </body>
+</html>

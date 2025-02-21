@@ -1,0 +1,44 @@
+body html {
+  height: 100%;
+}
+
+#logo-image {
+  width: 5rem;
+}
+.nav-icon {
+  width: 1rem;
+}
+.aside-icons {
+  width: 2rem;
+  margin-right: 8px;
+}
+.card-icons {
+  width: 3rem;
+}
+#sidebar {
+  background-color: #283986;
+}
+#navbar {
+  background-color: #283986;
+}
+#main-container {
+  /*No me gusta tener que colocar esto pero no encontre como solucionarlo por las buenas*/
+  margin-top: -8px;
+}
+#first-degradade {
+  background: linear-gradient(#6109f9, #bc70fb);
+  border-radius: 1.5rem;
+}
+#second-degradade {
+  background: linear-gradient(#0ef951, #8eff6f);
+  border-radius: 1.5rem;
+}
+#third-degradade {
+  background: linear-gradient(#09c9f9, #5bf1ff);
+  border-radius: 1.5rem;
+}
+
+#fourth-degradade {
+  background: linear-gradient(#09c9f9, #5bf1ff);
+  border-radius: 1.5rem;
+}
